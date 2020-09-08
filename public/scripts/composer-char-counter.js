@@ -8,6 +8,9 @@ $(document).ready(function () {
     const value = 140 - $(this).val().length;
     // use the text length to update the counter that is in the same form as the textarea
     $(this).parent().find(".counter").text(value)
+    // check whether the counter is negative and assign a class to change its style
+    value < 0 ? $(".counter").addClass("negative-value") : $(".counter").removeClass("negative-value")
+ 
   })
 
 });
