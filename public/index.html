@@ -34,7 +34,7 @@
     <!-- Top nav bar (fixed) -->
     <nav>
       <span id="logo">tweeter</span>
-      <a href="#tweet-text">
+      <a href="#compose-tweet">
         <div>
           <div><b>Write</b> a new tweet</div>
           <div id="nav-arrows">
@@ -59,7 +59,7 @@
     <main class="container">
 
       <section class="new-tweet">
-        <h2>Compose Tweet</h2>
+        <h2 id="compose-tweet">Compose Tweet</h2>
         <form method="POST" action="/tweets/">
           <div><label for="tweet-text">What are you humming about?</label></div>
           <textarea name="text" id="tweet-text"></textarea>

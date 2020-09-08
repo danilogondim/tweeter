@@ -6,11 +6,10 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
- }
+  position:fixed;
+  top:0;
+}
 
- /* nav span {
-  padding: 1.5em;
- } */
 
  nav > a {
   padding: 1.5em 1.5em 0;
