@@ -55,12 +55,22 @@ $(document).ready(() => {
     $("#tweet-text").val("");
     $("#tweet-text").parent().find(".counter").text(140);
     $.ajax({ url: '/tweets/', data, method: "POST" }).then(response => {
-      // maybe remove the then method in the final version?
+
+      // if our post was successful, we should do a get request to /tweets/, emptying our tweets-container and rendering the new tweets 
+      $.ajax({ url: '/tweets/', method: "GET" }).then(response => {
+        $("#tweets-container").empty();
+        renderTweets(response);
+      })
+
+      // remove the console.log in the final version?
       console.log("Success!")
     }).catch(e => {
       // maybe remove the catch method in the final version?
       console.log("Failed!");
     })
+
+
+
   });
 
   const loadTweets = () => {
