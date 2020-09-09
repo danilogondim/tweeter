@@ -7,7 +7,8 @@
 $(document).ready(() => {
 
   const createTweetElement = (tweetObj) => {
-    // still need some work so that the date is calculated instead of giving a fixed value of 10...
+    // calculate how many days after the data of creation we are
+    const date = Math.round((Date.now() - tweetObj.created_at) / (1000 * 60 * 60 * 24));
     const $tweet = $(`
       <article class="tweet">
         <header>
@@ -19,7 +20,7 @@ $(document).ready(() => {
         </header>
         <p>${tweetObj.content.text}</p>
         <footer>
-          <p>${10} days ago</p>
+          <p>${date} days ago</p>
           <div>
             <span>&#9873</span>
             <span>&#8633</span>
