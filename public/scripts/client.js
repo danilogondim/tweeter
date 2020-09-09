@@ -42,14 +42,26 @@ $(document).ready(() => {
 
   $('form').on('submit', function (evt) {
     evt.preventDefault();
-    $.ajax({ url: '/tweets/', data: $(this).serialize(), method: "POST" }).then(response => {
+    // check whether the tweet is invalid and return an alert to the user
+    if ($("#tweet-text").val().length > 140) {
+      return alert("Unfortunately, your tweet could not be processed because it exceeds the 140 character limit. Please update its content and try again.")
+    }
+    if (!$("#tweet-text").val()) {
+      return alert("It seems that your tweet is currently empty. Please fill it in with some awesome content!!")
+    }
+
+    // if it is valid, save the content to the "data" variable, reset the textarea and the counter and request the server to update the database
+    const data = $(this).serialize()
+    $("#tweet-text").val("");
+    $("#tweet-text").parent().find(".counter").text(140);
+    $.ajax({ url: '/tweets/', data, method: "POST" }).then(response => {
       // maybe remove the then method in the final version?
       console.log("Success!")
     }).catch(e => {
       // maybe remove the catch method in the final version?
       console.log("Failed!");
     })
-  })
+  });
 
   const loadTweets = () => {
     $.ajax({ url: '/tweets/', method: "GET" }).then(response => {
