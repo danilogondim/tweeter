@@ -68,4 +68,14 @@ $(document).ready(() => {
   renderTweets(data);
 
 
+  $('form').on('submit', function (evt) {
+    evt.preventDefault();
+    $.ajax({ url: '/tweets/', data: $(this).serialize(), method: "POST" }).then(response => {
+      console.log("Success!")
+    }).catch(e => {
+      console.log("Failed!");
+    })
+  })
+
+
 });
