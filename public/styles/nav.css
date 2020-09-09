@@ -13,8 +13,9 @@ nav {
 
 
  nav > a {
-  padding: 1.5em 1.5em 0;
-  height: 100%;
+  margin: 1.5em 1.5em 0;
+  box-sizing: border-box;
+  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
