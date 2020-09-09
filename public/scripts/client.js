@@ -6,6 +6,19 @@
 
 $(document).ready(() => {
 
+  // add a event listener to the nav anchor element to toggle the submission form
+  $("nav > a").on('click', (evt) => {
+    evt.preventDefault();
+    // if the form is not visible, slide down the form
+    if ($('.new-tweet:visible').length === 0) {
+      $('.new-tweet').slideDown();
+      return $("#tweet-text").focus();
+    }
+    // else, hide the form
+    return $('.new-tweet').slideUp();
+  })
+
+
   const escape = function (str) {
     let div = document.createElement('div');
     div.appendChild(document.createTextNode(str));
@@ -73,6 +86,7 @@ $(document).ready(() => {
           })
         }
       });
+      return;
     }
 
     // if it is valid, save the content to the "data" variable, reset the textarea and the counter and request the server to update the database
