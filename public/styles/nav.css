@@ -11,10 +11,8 @@ nav {
   z-index: 1;
 }
 
-
  nav > a {
   margin: 1.5em 1.5em 0;
-  box-sizing: border-box;
   height: auto;
   display: flex;
   flex-direction: column;
