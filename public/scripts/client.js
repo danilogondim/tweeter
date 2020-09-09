@@ -48,12 +48,31 @@ $(document).ready(() => {
 
   $('form').on('submit', function (evt) {
     evt.preventDefault();
+    // before validating the input, get rid of any error messages
+    $("#error-message").slideUp();
+    $("#error-message").empty();
+
     // check whether the tweet is invalid and return an alert to the user
     if ($("#tweet-text").val().length > 140) {
-      return alert("Unfortunately, your tweet could not be processed because it exceeds the 140 character limit. Please update its content and try again.")
+      $("#error-message").html("&#10060; Your tweet could not be processed because it exceeds the 140 character limit. Please try again.")
+      $("#error-message").slideDown({
+        start: function () {
+          $(this).css({
+            display: "flex"
+          })
+        }
+      });
+      return;
     }
     if (!$("#tweet-text").val()) {
-      return alert("It seems that your tweet is currently empty. Please fill it in with some awesome content!!")
+      $("#error-message").html("&#10060; It seems that your tweet is currently empty. Please fill it in with some awesome content!!");
+      $("#error-message").slideDown({
+        start: function () {
+          $(this).css({
+            display: "flex"
+          })
+        }
+      });
     }
 
     // if it is valid, save the content to the "data" variable, reset the textarea and the counter and request the server to update the database
@@ -74,9 +93,6 @@ $(document).ready(() => {
       // maybe remove the catch method in the final version?
       console.log("Failed!");
     })
-
-
-
   });
 
   const loadTweets = () => {
@@ -89,6 +105,4 @@ $(document).ready(() => {
     })
   }
   loadTweets();
-
-
 });
