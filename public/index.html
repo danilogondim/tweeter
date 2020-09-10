@@ -4,6 +4,7 @@
   <head>
     <!-- Meta Information -->
     <title>Tweeter - Home Page</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
 
     <!-- External CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
@@ -63,7 +64,7 @@
       </div>
       <br>
       <div id="username">
-        <h2>Danilo Gondim</h2>
+        <h2><b>Danilo</b> Gondim</h2>
       </div>
     </header>
 
@@ -71,7 +72,6 @@
     <main class="container">
 
       <section class="new-tweet">
-        <h2 id="compose-tweet">Compose Tweet</h2>
         <h3 id="error-message"></h3>
         <form method="POST" action="/tweets/">
           <div><label for="tweet-text">What are you humming about?</label></div>
@@ -82,9 +82,6 @@
           </footer>
         </form>
       </section>
-
-      <br>
-      <br>
 
       <section id="tweets-container">
 

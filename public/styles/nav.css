@@ -1,15 +1,21 @@
 nav {
   height: 120px;
   width: 100vw;
-  background-color: #4056A1;
   color: #FFFFFF;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position:fixed;
+  position:absolute;
   top:0;
   z-index: 1;
 }
+
+@media screen and (min-width:1024px) {
+  nav {
+    position:fixed;
+    background-color: #4056A1;
+  }
+ }
 
  #logo {
   font-family: 'Bungee', sans-serif;

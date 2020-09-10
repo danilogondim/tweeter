@@ -12,6 +12,7 @@
 
 .new-tweet{
   display: none;
+  margin: 3em 0 0;
 }
 
 #tweet-text {
@@ -48,7 +49,7 @@ form button {
   color: red;
 }
 
-#compose-tweet:before {
+.new-tweet:before {
   content: "";
   display: block;
   height: 120px; /* fixed header height*/
