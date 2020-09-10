@@ -6,7 +6,8 @@
 
 $(document).ready(() => {
 
-  const escape = function (str) {
+  // a function to deal with XSS vulnerability (malicious input containing js scripts)
+  const escape = function(str) {
     let div = document.createElement('div');
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
@@ -34,7 +35,7 @@ $(document).ready(() => {
           </div>
         </footer>
       </article>
-    `)
+    `);
     return $tweet;
   };
 
@@ -42,11 +43,11 @@ $(document).ready(() => {
     tweetsArray.forEach(elem => {
       const $tweet = createTweetElement(elem);
       $('#tweets-container').append($tweet);
-    })
+    });
 
   };
 
-  $('form').on('submit', function (evt) {
+  $('form').on('submit', function(evt) {
     evt.preventDefault();
     // before validating the input, get rid of any error messages
     $("#error-message").slideUp();
@@ -54,12 +55,12 @@ $(document).ready(() => {
 
     // check whether the tweet is invalid and return an alert to the user
     if ($("#tweet-text").val().length > 140) {
-      $("#error-message").html("&#10060; Your tweet could not be processed because it exceeds the 140 character limit. Please try again.")
+      $("#error-message").html("&#10060; Your tweet could not be processed because it exceeds the 140 character limit. Please try again.");
       $("#error-message").slideDown({
-        start: function () {
+        start: function() {
           $(this).css({
             display: "flex"
-          })
+          });
         }
       });
       return;
@@ -67,43 +68,34 @@ $(document).ready(() => {
     if (!$("#tweet-text").val()) {
       $("#error-message").html("&#10060; It seems that your tweet is currently empty. Please fill it in with some awesome content!!");
       $("#error-message").slideDown({
-        start: function () {
+        start: function() {
           $(this).css({
             display: "flex"
-          })
+          });
         }
       });
       return;
     }
 
     // if it is valid, save the content to the "data" variable, reset the textarea and the counter and request the server to update the database
-    const data = $(this).serialize()
+    const data = $(this).serialize();
     $("#tweet-text").val("");
     $("#tweet-text").parent().find(".counter").text(140);
-    $.ajax({ url: '/tweets/', data, method: "POST" }).then(response => {
+    $.ajax({ url: '/tweets/', data, method: "POST" }).then(() => {
 
-      // if our post was successful, we should do a get request to /tweets/, emptying our tweets-container and rendering the new tweets 
+      // if our post was successful, we should do a get request to /tweets/, emptying our tweets-container and rendering the new tweets
       $.ajax({ url: '/tweets/', method: "GET" }).then(response => {
         $("#tweets-container").empty();
         renderTweets(response);
-      })
-
-      // remove the console.log in the final version?
-      console.log("Success!")
-    }).catch(e => {
-      // maybe remove the catch method in the final version?
-      console.log("Failed!");
-    })
+      });
+    });
   });
 
   const loadTweets = () => {
     $.ajax({ url: '/tweets/', method: "GET" }).then(response => {
       console.log("Successful load!!");
       renderTweets(response);
-    }).catch(e => {
-      // maybe remove the catch method in the final version?
-      console.log("Failed to load tweets");
-    })
-  }
+    });
+  };
   loadTweets();
 });
