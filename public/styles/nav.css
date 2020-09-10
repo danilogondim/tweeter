@@ -58,3 +58,12 @@ nav {
   align-items: center;
   padding: 1.5em;
  }
+
+ .sidenav {
+    height: 100%;
+    width: fit-content;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    right: 0;
+}
