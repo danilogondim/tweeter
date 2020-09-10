@@ -12,6 +12,7 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@0,300;0,700;1,300;1,700&display=swap"
       rel="stylesheet">
+
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
     <link rel="stylesheet" href="/styles/sidenav.css" type="text/css" />
@@ -20,14 +21,11 @@
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
     <link rel="stylesheet" href="/styles/tweets.css" type="text/css" />
 
-
-
-
-
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     <!-- App JS -->
+    <script type="text/javascript" src="/scripts/helpers.js"></script>
     <script type="text/javascript" src="/scripts/client.js"></script>
     <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
     <script type="text/javascript" src="/scripts/composer.js"></script>
@@ -41,7 +39,7 @@
       <span id="logo">tweeter</span>
     </nav>
     
-    <!-- Add a lateral bar to hold navigational elements -->
+    <!-- Lateral bar to hold navigational elements -->
     <div id="mySidenav" class="sidenav">
       <button id="compose-button">
         <div><b>Write</b> a new tweet</div>
@@ -58,6 +56,7 @@
       </button>
     </div>
 
+    <!-- Avatar and first and last name -->
     <header>
       <div>
         <img src="/images/profile-hex.png">
@@ -71,6 +70,7 @@
     <!-- Page-specific (main) content here -->
     <main class="container">
 
+      <!-- from to submit new tweets -->
       <section class="new-tweet">
         <h3 id="error-message"></h3>
         <form method="POST" action="/tweets/">
@@ -83,11 +83,10 @@
         </form>
       </section>
 
+      <!-- container to be populated with the tweets from the database -->
       <section id="tweets-container">
 
       </section>
-
-
 
     </main>
   </body>
