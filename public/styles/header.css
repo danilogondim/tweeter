@@ -1,4 +1,4 @@
-body > header {
+#profile {
   height: 400px;
   width: 100%;
   display: flex;
@@ -9,26 +9,25 @@ body > header {
 }
 
 @media screen and (min-width:1024px) {
-  body > header {
+  #profile {
     max-width: 500px;
     margin: 3em 3em;
   }
- }
+}
  
- @media screen and (max-width:700px) {
-  body > header {
+@media screen and (max-width:700px) {
+  #profile {
     display: none;
   }
- }
+}
 
-
-header div {
+#avatar, #username {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-header div h2 {
+#username h2 {
   margin: 0.4em;
   color: white;
   font-weight: 500;

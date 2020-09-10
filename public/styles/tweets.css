@@ -2,6 +2,12 @@
   padding-top: 2.2em;
 }
 
+@media screen and (min-width:1024px) {
+  #tweets-container {
+    padding: 2.2em 2.5em 0 2.5em;
+  }
+}
+
 .tweet {
   border: 5px solid  dimgray;
   padding: 0.8em 1.2em;
@@ -28,11 +34,17 @@
   align-items: center;
 }
 
-.tweet header p {
+.avatar-and-name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tweet-text {
   padding: 0 0.8em;
 }
 
-.tweet header a {
+.handle {
   text-decoration: none;
   color: silver;
   font-weight: 600;
@@ -52,7 +64,7 @@
   margin: 0;
 }
 
-.tweet footer div {
+.icons {
   padding: 0 0.3em;
   color: royalblue;
 }

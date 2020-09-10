@@ -15,6 +15,17 @@
   margin: 3em 0 0;
 }
 
+.new-tweet:before {
+  content: "";
+  display: block;
+  height: 120px;
+  margin: -120px 0 0;
+}
+
+.new-tweet label {
+  font-weight: 900;
+}
+
 #tweet-text {
   resize: none;
   width: 100%;
@@ -25,16 +36,11 @@
   margin-bottom: 0.8em;
 }
 
-.new-tweet label {
-  font-weight: 900;
-}
-
 form footer {
   display: flex;
   justify-content: space-between;
   font-family: 'Bungee', sans-serif;
   align-items: center;
-
 }
 
 form button {
@@ -47,13 +53,6 @@ form button {
 
 .negative-value {
   color: red;
-}
-
-.new-tweet:before {
-  content: "";
-  display: block;
-  height: 120px; /* fixed header height*/
-  margin: -120px 0 0; /* negative fixed header height */
 }
 
 #error-message {

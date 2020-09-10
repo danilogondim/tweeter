@@ -6,16 +6,16 @@ $(document).ready(() => {
     const $tweet = $(`
       <article class="tweet">
         <header>
-          <div>
+          <div class="avatar-and-name">
             <img src="${escape(tweetObj.user.avatars)}">
             <p>${escape(tweetObj.user.name)}</p>
           </div>
-          <a href="#">${escape(tweetObj.user.handle)}</a>
+          <a class="handle" href="#">${escape(tweetObj.user.handle)}</a>
         </header>
-        <p>${escape(tweetObj.content.text)}</p>
+        <p class="tweet-text">${escape(tweetObj.content.text)}</p>
         <footer>
           <p>${timeFromTweet(tweetObj.created_at)} days ago</p>
-          <div>
+          <div class="icons">
             <span>&#9873</span>
             <span>&#8633</span>
             <span>&#9829</span>

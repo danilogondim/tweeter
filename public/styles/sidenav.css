@@ -23,15 +23,41 @@
   cursor: pointer;
   pointer-events: all;
   background: none;
- }
+}
 
- @media screen and (min-width:1024px) {
+.nav-arrows {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  color: red;
+  position: relative;
+  font-weight: 600;
+  animation: MoveUpDown 1.5s linear infinite;
+}
+
+@keyframes MoveUpDown {
+  0%, 100% {
+    bottom: 0;
+  }
+  50% {
+    bottom: 10px;
+  }
+}
+
+.nav-arrows :last-child {
+  position: absolute;
+  top: 6px;
+}
+
+@media screen and (min-width:1024px) {
   #compose-button  {
     margin: 2.2em 1.5em 0;
   }
- }
+}
 
- @media screen and (max-width:700px) {
+@media screen and (max-width:700px) {
   .sidenav {
     width: 100%;
     top: auto;
@@ -45,37 +71,10 @@
   #compose-button  {
     margin: 0 0.5em 0.5em;
     align-items: unset;
-   }
- }
-
- .nav-arrows {
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   margin: 0;
-   padding: 0;
-   color: red;
-   position: relative;
-   font-weight: 600;
-   animation: MoveUpDown 1.5s linear infinite;
- }
-
- @keyframes MoveUpDown {
-  0%, 100% {
-    bottom: 0;
-  }
-  50% {
-    bottom: 10px;
   }
 }
 
- .nav-arrows :last-child {
-   position: absolute;
-   top: 6px;
- }
-
-
- #scroll-button {
+#scroll-button {
   display: none;
   flex-direction: column;
   align-items: center;
@@ -89,10 +88,10 @@
   transform: rotate(180deg);
   cursor: pointer;
   pointer-events: all;
- }
+}
 
- #scroll-button .nav-arrows {
-   color: white;
-   font-size: 30px;
-   padding: 15px;
- }
+#scroll-button .nav-arrows {
+  color: white;
+  font-size: 30px;
+  padding: 15px;
+}
