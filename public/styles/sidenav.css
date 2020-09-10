@@ -1,4 +1,7 @@
 .sidenav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   height: 100%;
   width: fit-content;
   position: fixed;
@@ -20,7 +23,7 @@
   cursor: pointer;
  }
 
- #nav-arrows {
+ .nav-arrows {
    display: flex;
    flex-direction: column;
    align-items: center;
@@ -41,7 +44,28 @@
   }
 }
 
- #nav-arrows :last-child {
+ .nav-arrows :last-child {
    position: absolute;
    top: 6px;
+ }
+
+
+ #scroll-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto 1.5em 1.5em auto;
+  width: 60px;
+  height: 60px;
+  background-color: red;
+  border: none;
+  border-radius: 50%;
+  transform: rotate(180deg);
+ }
+
+ #scroll-button .nav-arrows {
+   color: white;
+   font-size: 30px;
+   padding: 15px;
  }
