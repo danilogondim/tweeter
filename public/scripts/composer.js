@@ -14,6 +14,7 @@ $(document).ready(() => {
 
 
   $("#scroll-button").on('click', (evt) => {
+    window.scrollTo(0, 0);
     $('.new-tweet').slideDown();
     return $("#tweet-text").focus();
   })
