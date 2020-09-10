@@ -18,6 +18,15 @@ $(document).ready(() => {
     return $("#tweet-text").focus();
   })
 
+  $(window).scroll(() => {
 
-
+    const scroll = $(window).scrollTop();
+    if (scroll >= 400) {
+      $("#compose-button").hide();
+      $("#scroll-button").show();
+    } else {
+      $("#compose-button").show();
+      $("#scroll-button").hide();
+    }
+  });
 });
