@@ -11,17 +11,17 @@ nav {
   z-index: 1;
 }
 
- nav > a {
+#compose-button {
+  color: white;
+  background-color: #4056A1;
+  border:none;
   margin: 1.5em 1.5em 0;
   height: auto;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
- }
-
- nav a {
-   text-decoration: none;
-   color: white;
+  align-items: center;
+  cursor: pointer;
  }
 
  #nav-arrows {
