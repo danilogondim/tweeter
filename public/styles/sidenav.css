@@ -1,0 +1,47 @@
+.sidenav {
+  height: 100%;
+  width: fit-content;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  right: 0;
+}
+
+#compose-button {
+  color: white;
+  background-color: #4056A1;
+  border:none;
+  margin: 2.2em 1.5em 0;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  cursor: pointer;
+ }
+
+ #nav-arrows {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   margin: 0;
+   padding: 0;
+   color: red;
+   position: relative;
+   font-weight: 600;
+   animation: MoveUpDown 1.5s linear infinite;
+ }
+
+ @keyframes MoveUpDown {
+  0%, 100% {
+    bottom: 0;
+  }
+  50% {
+    bottom: 10px;
+  }
+}
+
+ #nav-arrows :last-child {
+   position: absolute;
+   top: 6px;
+ }
