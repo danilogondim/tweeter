@@ -61,7 +61,9 @@ form button {
   justify-content: center;
   align-items: center;
   background-color: #f5bdbd;
-  height: 40px;
+  height: fit-content;
+  width: fit-content;
+  padding: 0.5em;
   border-radius: 10px;
   font-size: 20px;
   color: red;

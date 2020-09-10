@@ -14,6 +14,13 @@ body > header {
     margin: 3em 3em;
   }
  }
+ 
+ @media screen and (max-width:700px) {
+  body > header {
+    display: none;
+  }
+ }
+
 
 header div {
   display: flex;
