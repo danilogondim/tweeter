@@ -20,6 +20,8 @@ For every tweet that is made, the server will create a random user to attach to 
 !["Description"](githublink)
 ### Toggle button2
 !["Description"](githublink)
+### Customized time counter
+!["Description"](githublink)
 
 ## Getting Started
 

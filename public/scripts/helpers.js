@@ -6,9 +6,37 @@ const escape = str => {
 };
 
 // calculate the time spent between the tweet creation and the day the tweet is being rendered
-
-// to be implemented: display time be years, months, etc. Need to change the text that generates the tweet
 const timeFromTweet = creationDate => {
-  const date = Math.round((Date.now() - creationDate) / (1000 * 60 * 60 * 24));
-  return date;
+  const difference = (Date.now() - creationDate);
+  // calculate every possibility and populate an array
+  const years = difference / (1000 * 60 * 60 * 24 * 30 * 12);
+  const months = difference / (1000 * 60 * 60 * 24 * 30);
+  const days = difference / (1000 * 60 * 60 * 24);
+  const hours = difference / (1000 * 60 * 60);
+  const minutes = difference / (1000 * 60);
+  const seconds = difference / 1000;
+  const periods = [years, months, days, hours, minutes, seconds];
+
+  // loop through each element and stop at the first one that is higher then 1
+  let counter = 0;
+  let output;
+  for (const reference of periods) {
+    if (reference > 1) {
+      output = reference;
+      break;
+    }
+    counter++
+  }
+  
+  const suffix = {
+    0: " years",
+    1: " months",
+    2: " days",
+    3: " hours",
+    4: " minutes",
+    5: " seconds"
+  }
+
+  // print the adequate output
+  return Math.round(output) ? Math.round(output) + suffix[counter] + " ago" : "Just now";
 };

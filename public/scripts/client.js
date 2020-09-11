@@ -14,7 +14,7 @@ $(document).ready(() => {
         </header>
         <p class="tweet-text">${escape(tweetObj.content.text)}</p>
         <footer>
-          <p>${timeFromTweet(tweetObj.created_at)} days ago</p>
+          <p>${timeFromTweet(tweetObj.created_at)}</p>
           <div class="icons">
             <span>&#9873</span>
             <span>&#8633</span>
