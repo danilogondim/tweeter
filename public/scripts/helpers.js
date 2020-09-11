@@ -7,14 +7,14 @@ const escape = str => {
 
 // calculate the time spent between the tweet creation and the day the tweet is being rendered
 const timeFromTweet = creationDate => {
-  const difference = (Date.now() - creationDate);
+  const milliseconds = Date.now() - creationDate;
   // calculate every possibility and populate an array
-  const years = difference / (1000 * 60 * 60 * 24 * 30 * 12);
-  const months = difference / (1000 * 60 * 60 * 24 * 30);
-  const days = difference / (1000 * 60 * 60 * 24);
-  const hours = difference / (1000 * 60 * 60);
-  const minutes = difference / (1000 * 60);
-  const seconds = difference / 1000;
+  const seconds = milliseconds / 1000;
+  const minutes = seconds / 60;
+  const hours = minutes / 60;
+  const days = hours / 24;
+  const months = days / 30;
+  const years = months / 12;
   const periods = [years, months, days, hours, minutes, seconds];
 
   // loop through each element and stop at the first one that is higher then 1
@@ -22,21 +22,23 @@ const timeFromTweet = creationDate => {
   let output;
   for (const reference of periods) {
     if (reference > 1) {
-      output = reference;
+      output = Math.round(reference);
       break;
     }
-    counter++
-  }
-  
-  const suffix = {
-    0: " years",
-    1: " months",
-    2: " days",
-    3: " hours",
-    4: " minutes",
-    5: " seconds"
+    counter++;
   }
 
+  const suffix = {
+    0: " year",
+    1: " month",
+    2: " day",
+    3: " hour",
+    4: " minute",
+    5: " second"
+  };
+
+  const adjustedSuffix = output > 1 ? suffix[counter] + "s" : suffix[counter];
+
   // print the adequate output
-  return Math.round(output) ? Math.round(output) + suffix[counter] + " ago" : "Just now";
+  return output ? output + adjustedSuffix + " ago" : "Just now";
 };
