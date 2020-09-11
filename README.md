@@ -15,7 +15,7 @@ For every tweet that is made, the server will create a random user to attach to 
 ### Layout for screens with 700px of width and less
 !["Layout for small screens"](https://github.com/danilogondim/tweeter/blob/master/docs/700px-of-width-and-less.png?raw=true)
 ### Tweet box
-!["Tweet box"](githublink)
+!["Tweet box"](https://github.com/danilogondim/tweeter/blob/master/docs/tweet-box.png?raw=true)
 ### Hovering effect
 !["hovering effect"](https://github.com/danilogondim/tweeter/blob/master/docs/hover-effect.png?raw=true)
 ### Compose button (it hides or shows the tweet form)
