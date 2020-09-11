@@ -7,14 +7,14 @@ const escape = str => {
 
 // calculate the time spent between the tweet creation and the day the tweet is being rendered
 const timeFromTweet = creationDate => {
-  const difference = (Date.now() - creationDate);
+  const milliseconds = (Date.now() - creationDate);
   // calculate every possibility and populate an array
-  const years = difference / (1000 * 60 * 60 * 24 * 30 * 12);
-  const months = difference / (1000 * 60 * 60 * 24 * 30);
-  const days = difference / (1000 * 60 * 60 * 24);
-  const hours = difference / (1000 * 60 * 60);
-  const minutes = difference / (1000 * 60);
-  const seconds = difference / 1000;
+  const seconds = milliseconds / 1000;
+  const minutes = seconds / 60;
+  const hours = minutes / 60;
+  const days = hours / 24;
+  const months = days / 30;
+  const years = months / 12;
   const periods = [years, months, days, hours, minutes, seconds];
 
   // loop through each element and stop at the first one that is higher then 1
