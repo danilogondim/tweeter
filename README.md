@@ -9,19 +9,27 @@ For every tweet that is made, the server will create a random user to attach to 
 ## Final Product
 
 ### Layout for screens with 1024px of width and beyond
-!["Description"](githublink)
+!["Layout for large screens"](githublink)
 ### Layout for screens with less than 1024px and more than 700px of width
-!["Description"](githublink)
+!["Layout for medium screens"](githublink)
 ### Layout for screens with 700px of width and less
-!["Description"](githublink)
+!["Layout for small screens"](githublink)
 ### Tweet box
 !["Tweet box"](githublink)
-### Toggle button1
-!["Description"](githublink)
-### Toggle button2
-!["Description"](githublink)
+### Hovering effect
+!["hovering effect"](githublink)
+### Compose button (it hides or shows the tweet form)
+!["Compose button"](githublink)
+### Hidden form
+!["Hidden form"](githublink)
+### Scroll button (it appears when scrolling and it is used as a shortcut to focus the tweet form)
+!["Scroll button"](githublink)
 ### Customized time counter
-!["Description"](githublink)
+!["Customized time counter"](githublink)
+### Error message - tweet exceeds the character limit
+!["Error message - limit exceeded"](githublink)
+### Error message - empty tweet
+!["Error message - empty tweet"](githublink)
 
 ## Getting Started
 
