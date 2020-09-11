@@ -9,27 +9,27 @@ For every tweet that is made, the server will create a random user to attach to 
 ## Final Product
 
 ### Layout for screens with 1024px of width and beyond
-!["Layout for large screens"](githublink)
+!["Layout for large screens"](https://github.com/danilogondim/tweeter/blob/master/docs/1024px-of-width-and-over.png?raw=true)
 ### Layout for screens with less than 1024px and more than 700px of width
-!["Layout for medium screens"](githublink)
+!["Layout for medium screens"](https://github.com/danilogondim/tweeter/blob/master/docs/between-700px-and-1024px-of-width.png?raw=true)
 ### Layout for screens with 700px of width and less
-!["Layout for small screens"](githublink)
+!["Layout for small screens"](https://github.com/danilogondim/tweeter/blob/master/docs/700px-of-width-and-less.png?raw=true)
 ### Tweet box
 !["Tweet box"](githublink)
 ### Hovering effect
-!["hovering effect"](githublink)
+!["hovering effect"](https://github.com/danilogondim/tweeter/blob/master/docs/hover-effect.png?raw=true)
 ### Compose button (it hides or shows the tweet form)
-!["Compose button"](githublink)
+!["Compose button"](https://github.com/danilogondim/tweeter/blob/master/docs/compose-button.png?raw=true)
 ### Hidden form
-!["Hidden form"](githublink)
+!["Hidden form"](https://github.com/danilogondim/tweeter/blob/master/docs/hidden-form.png?raw=true)
 ### Scroll button (it appears when scrolling and it is used as a shortcut to focus the tweet form)
-!["Scroll button"](githublink)
+!["Scroll button"](https://github.com/danilogondim/tweeter/blob/master/docs/scroll-button.png?raw=true)
 ### Customized time counter
-!["Customized time counter"](githublink)
+!["Customized time counter"](https://github.com/danilogondim/tweeter/blob/master/docs/customized%20time%20counter.png?raw=true)
 ### Error message - tweet exceeds the character limit
-!["Error message - limit exceeded"](githublink)
+!["Error message - limit exceeded"](https://github.com/danilogondim/tweeter/blob/master/docs/tweet-exceeds-length.png?raw=true)
 ### Error message - empty tweet
-!["Error message - empty tweet"](githublink)
+!["Error message - empty tweet"](https://github.com/danilogondim/tweeter/blob/master/docs/empty-tweet.png?raw=true)
 
 ## Getting Started
 
