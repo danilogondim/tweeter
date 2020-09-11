@@ -10,9 +10,15 @@
   color: dimgray
 }
 
-.new-tweet{
+.new-tweet {
   display: none;
   margin: 3em 0 0;
+}
+
+@media screen and (min-width:1024px) {
+  .new-tweet {
+    padding: 0 2.5em 0 2.5em;
+  }
 }
 
 .new-tweet:before {
