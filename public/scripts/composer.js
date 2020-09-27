@@ -28,7 +28,7 @@ $(document).ready(() => {
     const scroll = $(window).scrollTop();
 
     // if the user is scrolling down the page, hide the compose button and show the scroll button (the one that brings the user back to the top of the page and focus the textarea to create a new tweet)
-    if (scroll >= 400) {
+    if (scroll >= 100) {
       $("#compose-button").hide();
       $("#scroll-button").show();
 
