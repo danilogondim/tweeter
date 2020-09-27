@@ -21,7 +21,7 @@ For every tweet that is made, the server will create a random user to attach to 
 ### Compose button (it hides or shows the tweet form)
 !["Compose button"](https://github.com/danilogondim/tweeter/blob/master/docs/compose-button-w-behaviour.gif?raw=true)
 ### Scroll button (it appears when scrolling and it is used as a shortcut to focus the tweet form)
-!["Scroll button"](https://github.com/danilogondim/tweeter/blob/master/docs/scroll-button.png?raw=true)
+!["Scroll button"](https://github.com/danilogondim/tweeter/blob/master/docs/scroll-button.gif?raw=true)
 ### Customized time counter
 !["Customized time counter"](https://github.com/danilogondim/tweeter/blob/master/docs/customized%20time%20counter.png?raw=true)
 ### Error messages - empty tweet and tweet exceeds the character limit
