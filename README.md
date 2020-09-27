@@ -20,8 +20,6 @@ For every tweet that is made, the server will create a random user to attach to 
 !["hovering effect"](https://github.com/danilogondim/tweeter/blob/master/docs/hover-effect.png?raw=true)
 ### Compose button (it hides or shows the tweet form)
 !["Compose button"](https://github.com/danilogondim/tweeter/blob/master/docs/compose-button.png?raw=true)
-### Hidden form
-!["Hidden form"](https://github.com/danilogondim/tweeter/blob/master/docs/hidden-form.png?raw=true)
 ### Scroll button (it appears when scrolling and it is used as a shortcut to focus the tweet form)
 !["Scroll button"](https://github.com/danilogondim/tweeter/blob/master/docs/scroll-button.png?raw=true)
 ### Customized time counter
