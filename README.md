@@ -17,17 +17,15 @@ For every tweet that is made, the server will create a random user to attach to 
 ### Tweet box
 !["Tweet box"](https://github.com/danilogondim/tweeter/blob/master/docs/tweet-box.png?raw=true)
 ### Hovering effect
-!["hovering effect"](https://github.com/danilogondim/tweeter/blob/master/docs/hover-effect.png?raw=true)
+!["hovering effect"](https://github.com/danilogondim/tweeter/blob/master/docs/hover-effect.gif?raw=true)
 ### Compose button (it hides or shows the tweet form)
-!["Compose button"](https://github.com/danilogondim/tweeter/blob/master/docs/compose-button.png?raw=true)
+!["Compose button"](https://github.com/danilogondim/tweeter/blob/master/docs/compose-button-w-behaviour.gif?raw=true)
 ### Scroll button (it appears when scrolling and it is used as a shortcut to focus the tweet form)
 !["Scroll button"](https://github.com/danilogondim/tweeter/blob/master/docs/scroll-button.png?raw=true)
 ### Customized time counter
 !["Customized time counter"](https://github.com/danilogondim/tweeter/blob/master/docs/customized%20time%20counter.png?raw=true)
-### Error message - tweet exceeds the character limit
-!["Error message - limit exceeded"](https://github.com/danilogondim/tweeter/blob/master/docs/tweet-exceeds-length.png?raw=true)
-### Error message - empty tweet
-!["Error message - empty tweet"](https://github.com/danilogondim/tweeter/blob/master/docs/empty-tweet.png?raw=true)
+### Error messages - empty tweet and tweet exceeds the character limit
+!["Error message - limit exceeded"](https://github.com/danilogondim/tweeter/blob/master/docs/error-messages.gif?raw=true)
 
 ## Getting Started
 
